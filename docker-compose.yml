@@ -20,11 +20,6 @@ services:
       - DB_DATABASE=laravel
       - DB_USERNAME=laravel
       - DB_PASSWORD=secret
-  test:
-    build: .
-    volumes:
-      - ./src:/var/www/html
-    command: npm run test:unit
   node:
     image: node:14
     volumes:

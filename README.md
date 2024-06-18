@@ -61,17 +61,6 @@ Após configurar e iniciar o projeto, você pode acessar o dashboard BI através
 - **Dashboard**: Visualização de gráficos conforme filtros aplicados (Total Vendas por Situação,Valor Vendas por Cliente,Total de Venda por Cliente,Vendas por Cidade,Vendas por dia,Vendas por dia da semana).
 - **Detalhes**: Visualização detalhada de vendas conforme filtros aplicados.
 
-## Testes Unitários
-
-O projeto inclui testes unitários para garantir a integridade e funcionamento correto das funcionalidades principais.
-
-### Execução dos Testes
-
-Para executar os testes unitários, utilize o seguinte comando dentro do contêiner Docker do backend:
-
-```bash
-docker-compose up --build test
-```
 ## Contribuição
 
 Contribuições são bem-vindas. Sinta-se à vontade para abrir um pull request com melhorias, correções de bugs ou novas funcionalidades.
