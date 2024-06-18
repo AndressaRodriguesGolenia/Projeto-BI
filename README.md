@@ -26,7 +26,6 @@ Para executar este projeto localmente, siga os passos abaixo:
 Certifique-se de ter instalado em seu ambiente de desenvolvimento:
 
 - Docker
-- Node.js (para o frontend)
 
 ### Passos para Instalação
 
@@ -71,7 +70,7 @@ O projeto inclui testes unitários para garantir a integridade e funcionamento c
 Para executar os testes unitários, utilize o seguinte comando dentro do contêiner Docker do backend:
 
 ```bash
-docker exec -it app vendor/bin/phpunit
+docker-compose up --build test
 ```
 ## Contribuição
 
