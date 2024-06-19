@@ -14,7 +14,7 @@ class VendasController extends Controller
 
         // Filtrar por cidade
         if ($request->filled('cidade')) {
-            $query->where('cidade',  'like', '%' .strtolower($request->cidade). '%');
+            $query->whereRaw('LOWER(cidade) LIKE ?', ['%' . Str::lower($request->cidade) . '%']);
         }
 
         // Filtrar por rastreio
@@ -24,7 +24,7 @@ class VendasController extends Controller
 
         // Filtrar por nome do cliente
         if ($request->filled('nome_cliente')) {
-            $query->where('nome_cliente', 'like', '%' . strtolower($request->nome_cliente) . '%');
+            $query->whereRaw('LOWER(nome_cliente) LIKE ?', ['%' . Str::lower($request->nome_cliente) . '%']);
         }
 
         // Filtrar por id da venda
@@ -40,9 +40,9 @@ class VendasController extends Controller
     {
         $query = Venda::query();
 
-         // Filtrar por cidade
-         if ($request->filled('cidade')) {
-            $query->where('cidade',  'like', '%' .strtolower($request->cidade). '%');
+        // Filtrar por cidade
+        if ($request->filled('cidade')) {
+            $query->whereRaw('LOWER(cidade) LIKE ?', ['%' . Str::lower($request->cidade) . '%']);
         }
 
         // Filtrar por rastreio
@@ -52,7 +52,7 @@ class VendasController extends Controller
 
         // Filtrar por nome do cliente
         if ($request->filled('nome_cliente')) {
-            $query->where('nome_cliente', 'like', '%' . strtolower($request->nome_cliente) . '%');
+            $query->whereRaw('LOWER(nome_cliente) LIKE ?', ['%' . Str::lower($request->nome_cliente) . '%']);
         }
 
         // Filtrar por id da venda
